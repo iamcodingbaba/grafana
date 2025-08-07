@@ -1,0 +1,22 @@
+replicas: 2
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 2
+  targetCPU: "60"
+  targetMemory: ""
+
+service:
+  enabled: true
+  type: LoadBalancer
+persistence:
+  type: pvc
+  enabled: true
+  # storageClassName: default
+  ## (Optional) Use this to bind the claim to an existing PersistentVolume (PV) by name.
+  volumeName: ""
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+adminUser: admin
+adminPassword: strongpassword

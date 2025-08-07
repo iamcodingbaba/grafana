@@ -1,0 +1,1 @@
+helm install <name you want to give> grafana/grafana -f <name of file where you have made changes from values file and stored in yaml file>
